@@ -664,7 +664,7 @@ end
 
             C = rand(T,m,n)
             dC = oneArray(C)
-            beta = rand(T)
+            beta = zero(T)  # rand(T)
             oneMKL.trmm!('L','U','N','N',alpha,beta,dA,dB,dC)
             h_C = Array(dC)
             D = alpha*A*B + beta*C
@@ -745,7 +745,7 @@ end
                 C = rand(T,m,m)
                 dC = oneArray(C)
                 beta = rand(T)
-                oneMKL.trsm!('L','U','N','N',alpha,beta,dA,dB,dC)
+                oneMKL.trsm!('R','U','N','N',alpha,beta,dA,dB,dC)
                 h_C = Array(dC)
                 D = alpha*(A/B) + beta*C
                 @test D ≈ h_C
