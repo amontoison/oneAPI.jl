@@ -1193,9 +1193,9 @@ function trmm!(side::Char,
                transa::Char,
                diag::Char,
                alpha::Number,
-               A::oneStridedMatrix{$elty},
-               B::oneStridedMatrix{$elty},
-               C::oneStridedMatrix{$elty}) where T
+               A::oneStridedMatrix{T},
+               B::oneStridedMatrix{T},
+               C::oneStridedMatrix{T}) where T
     trmm!(side, uplo, transa, diag, alpha, one(T), A, B, C)
 end
 function trsm!(side::Char,
@@ -1203,9 +1203,9 @@ function trsm!(side::Char,
                transa::Char,
                diag::Char,
                alpha::Number,
-               A::oneStridedMatrix{$elty},
-               B::oneStridedMatrix{$elty},
-               C::oneStridedMatrix{$elty}) where T
+               A::oneStridedMatrix{T},
+               B::oneStridedMatrix{T},
+               C::oneStridedMatrix{T}) where T
     trsm!(side, uplo, transa, diag, alpha, one(T), A, B, C)
 end
 
