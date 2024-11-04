@@ -1162,7 +1162,7 @@ for (mmname_variant, smname_variant, elty) in
             ldb = max(1,stride(B,2))
             ldc = max(1,stride(C,2))
             queue = global_queue(context(A), device())
-            $mmname_variant(sycl_queue(queue), side, uplo, transa, diag, m, n, alpha, A, lda, B, ldb, beta, c, ldc)
+            $mmname_variant(sycl_queue(queue), side, uplo, transa, diag, m, n, alpha, A, lda, B, ldb, beta, C, ldc)
             B
         end
 
@@ -1183,7 +1183,7 @@ for (mmname_variant, smname_variant, elty) in
             ldb = max(1,stride(B,2))
             ldc = max(1,stride(C,2))
             queue = global_queue(context(A), device())
-            $smname_variant(sycl_queue(queue), side, uplo, transa, diag, m, n, alpha, A, lda, B, ldb, beta, c, ldc)
+            $smname_variant(sycl_queue(queue), side, uplo, transa, diag, m, n, alpha, A, lda, B, ldb, beta, C, ldc)
             B
         end
     end
