@@ -1,7 +1,7 @@
 # interfacing with LinearAlgebra standard library
 
 import LinearAlgebra
-using LinearAlgebra: Transpose, Adjoint,
+using LinearAlgebra: Transpose, Adjoint, AdjOrTrans,
                      Hermitian, Symmetric,
                      LowerTriangular, UnitLowerTriangular,
                      UpperTriangular, UnitUpperTriangular,
