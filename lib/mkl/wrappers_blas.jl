@@ -1196,7 +1196,7 @@ function trmm!(side::Char,
                A::oneStridedMatrix{T},
                B::oneStridedMatrix{T},
                C::oneStridedMatrix{T}) where T
-    trmm!(side, uplo, transa, diag, alpha, one(T), A, B, C)
+    trmm!(side, uplo, transa, diag, alpha, zero(T), A, B, C)
 end
 function trsm!(side::Char,
                uplo::Char,
@@ -1206,7 +1206,7 @@ function trsm!(side::Char,
                A::oneStridedMatrix{T},
                B::oneStridedMatrix{T},
                C::oneStridedMatrix{T}) where T
-    trsm!(side, uplo, transa, diag, alpha, one(T), A, B, C)
+    trsm!(side, uplo, transa, diag, alpha, zero(T), A, B, C)
 end
 
 ## hemm
